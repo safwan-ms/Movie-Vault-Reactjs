@@ -35,9 +35,9 @@ const Home = () => {
     loadPopularMovies();
   }, []);
   return (
-    <div className="home">
+    <div className="home overflow-hidden">
       <div>
-        <form onSubmit={handleSearch} className="flex justify-center mt-7">
+        <form onSubmit={handleSearch} className="flex px-5 justify-center mt-7">
           <input
             type="text"
             placeholder="Type here"
@@ -45,7 +45,7 @@ const Home = () => {
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full max-w-xs mr-3 rounded-full input input-bordered input-warning"
           />
-          <button className="px-4 py-2 font-bold bg-red-700 rounded-full ">
+          <button className="px-4 py-2 font-bold bg-red-700 rounded-full text-base ">
             Search
           </button>
         </form>
@@ -55,7 +55,7 @@ const Home = () => {
           <span className="loading loading-ring loading-lg"></span>
         </div>
       ) : (
-        <div className="movies-grid  mt-10 gap-6 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3  lg:grid-cols-4 place-items-center">
+        <div className="px-5 movies-grid  mt-10 gap-6  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3  lg:grid-cols-6 place-items-center">
           {movies.map((movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))}
