@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard.jsx";
 import { getPopularMovies, searchMovies } from "../services/api.js";
 const Home = () => {

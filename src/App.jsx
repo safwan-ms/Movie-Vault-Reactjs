@@ -1,4 +1,3 @@
-import React from "react";
 import Home from "./pages/Home.jsx";
 import { Routes, Route } from "react-router-dom";
 import Favorites from "./pages/Favorites.jsx";
